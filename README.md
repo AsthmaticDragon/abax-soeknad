@@ -1,9 +1,7 @@
 # brewdogbeerchallenge
 
-## Dev version
+## Launching the project
 npm run serve
-## Build Version
-
 ## Architecture
 The biggest choice I made for the architecture is how I handle state. I change state whenever a button is pressed, but only allowing state to be changed if you have completed the previous stages of the ingredient. This is checked programmatically with a watch function, handling edge cases (in case a beer only has the middle or end part) when the component is mounted by skipping to the appropriate stage. Because the API is instrumental to rendering the application I decided not to wrap it in a try-catch to utilize the fail fast principle. I would not have done this with a third-party library like AJAX
 ## Known issues
